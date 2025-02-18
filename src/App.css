@@ -1,0 +1,85 @@
+/* General styling for the game container */
+.game-container {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+/* Style for the controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.controls select, .controls button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.controls button {
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.controls button:hover {
+  background-color: #2980b9;
+}
+
+.controls p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Centers the game board */
+.game-board-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Grid layout for the game board */
+.game-board {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+/* Dynamically sets the grid for different difficulties */
+.grid-4x4 { grid-template-columns: repeat(4, 80px); }
+.grid-6x6 { grid-template-columns: repeat(6, 80px); }
+.grid-8x8 { grid-template-columns: repeat(8, 80px); }
+
+/* Styling for individual cards */
+.card {
+  width: 80px;
+  height: 80px;
+  background-color: #dd2020;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.card.flipped {
+  background-color: #2ecc71;
+  pointer-events: none;
+}
